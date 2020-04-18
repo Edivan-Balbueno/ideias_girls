@@ -2,13 +2,20 @@
 <br>
 
 <% @ideas.in_groups_of(3) do |group| %>
-  <div class="row">
+
+  <div class="nav pb-4">
     <% group.compact.each do |idea| %>
       <div class="col-md-4">
-        <%= image_tag idea.picture_url(:thumb) if idea.picture.present? %>
-        <h4><%= link_to idea.name, idea %></h4>
-        <%= idea.description %>
-      </div>
+      	<div class="card">
+        <%= image_tag idea.picture_url, :width => 200, :height => 200 if idea.picture.present? %>
+
+        <div class="card-header">
+  			<h4><%= link_to idea.name, idea, class:"btn btn-primary" %></h4>
+        	<%= idea.description %>
+        </div>
+        </div>
+  	  </div>
     <% end %>
   </div>
+
 <% end %>

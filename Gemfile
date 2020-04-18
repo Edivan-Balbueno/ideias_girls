@@ -7,6 +7,10 @@ ruby '2.4.4'
 gem 'rails', '~> 5.2.0'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
+#Devise
+gem 'devise'
+#editor de texto
+gem "wysiwyg-rails"
 #mini magick
 gem 'mini_magick'
 #uploade img
